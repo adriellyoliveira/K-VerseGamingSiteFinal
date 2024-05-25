@@ -73,27 +73,5 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
-let slideIndex = 0;
 
-function showReviews() {
-    const reviews = document.querySelectorAll('.reviews');
-    if (slideIndex >= reviews.length) {
-        slideIndex = 0;
-    } else if (slideIndex < 0) {
-        slideIndex = reviews.length - 1;
-    }
-    const width = reviews[0].clientWidth;
-    document.querySelector('.reviews-container').style.transform = `translateX(-${slideIndex * width}px)`;
-}
 
-function nextReview() {
-    slideIndex++;
-    showReviews();
-}
-
-function prevReview() {
-    slideIndex--;
-    showReviews();
-}
-
-showReviews();

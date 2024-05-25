@@ -424,6 +424,7 @@ section {
 
 .reviews-container {
     display: flex;
+    overflow: hidden;
     transition: transform 0.5s ease;
 }
 
@@ -465,44 +466,6 @@ section {
     font-weight: 400;
     text-transform: capitalize;
     margin-bottom: 10px;
-}
-
-.navigation {
-    margin-top: 20px;
-    position: relative;
-}
-
-.prev-btn,
-.next-btn {
-    background-color: transparent;
-    color: white;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 1;
-}
-
-.prev-btn {
-    left: 40px;
-    top: -200px;
-}
-
-.next-btn {
-    right: 40px;
-    top: -200px;
-}
-
-.prev-btn:focus,
-.next-btn:focus {
-    outline: none;
-}
-
-.prev-btn:hover,
-.next-btn:hover {
-    color: #ccc;
 }
 /*reviews fim*/
 
