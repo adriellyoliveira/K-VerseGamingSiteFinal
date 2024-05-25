@@ -467,6 +467,7 @@ section {
     text-transform: capitalize;
     margin-bottom: 10px;
 }
+
 /*reviews fim*/
 
 
@@ -508,9 +509,10 @@ section {
 .cart p {
     color: rgb(179, 179, 179);
     font-size: 15px;
-    max-width: 380px;
+    max-width: 400px;
     line-height: 25px;
     margin-bottom: 12px;
+    text-align: justify;
 }
 
 .cart h6 {
