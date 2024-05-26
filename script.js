@@ -78,44 +78,6 @@ loginBtn.addEventListener('click', () => {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Verifica se o modal já foi exibido antes
-    if (!getCookie('modalShown')) {
-        displayModal(); // Exibe o modal se o cookie não existir
-    }
-
-    // Função para fechar o modal ao clicar no botão de fechar ou fora dele
-    document.querySelectorAll('.close-button, .modal').forEach(function(element) {
-        element.addEventListener('click', function() {
-            document.getElementById('welcomeMessage').style.display = 'none';
-            setCookie('modalShown', true, 365); // Define o cookie para indicar que o modal foi exibido
-        });
-    });
-});
-
-// Função para exibir o modal
-function displayModal() {
-    document.getElementById('welcomeMessage').style.display = 'block';
-}
-
-// Função para definir um cookie
-function setCookie(name, value, days) {
-    var expires = '';
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = '; expires=' + date.toUTCString();
-    }
-    document.cookie = name + '=' + (value || '') + expires + '; path=/';
-}
-
-// Função para obter o valor de um cookie
-function getCookie(name) {
-    var match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-    if (match) return match[2];
-    return null;
-}
-
 
 
 
