@@ -229,3 +229,29 @@ body {
 .container.active .toggle-right {
     transform: translateX(200%);
 }
+
+/* Estilos para telas menores que 768px (exemplo: tablets e smartphones) */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        min-height: auto;
+    }
+
+    .sing-in,
+    .sing-up {
+        width: 100%;
+        left: 0;
+    }
+
+    .toggle-container {
+        width: 100%;
+        left: 0;
+        border-radius: 0;
+    }
+
+    .toggle,
+    .toggle-panel {
+        width: 100%;
+        transform: translateX(0);
+    }
+}
