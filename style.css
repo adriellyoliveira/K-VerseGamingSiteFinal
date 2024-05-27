@@ -369,6 +369,37 @@ li {
 #radio4:checked ~ .navigation-auto .auto-btn5 {
     background-color: var(--color4-);
 }
+
+@media screen and (max-width: 768px) {
+    .slider {
+        width: 300%;
+        height: auto;
+    }
+
+    .slides {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .slide {
+        width: 100%;
+    }
+
+    .slide img {
+        width: 100%;
+    }
+
+    .manual-navigation, .navigation-auto {
+        width: 100%;
+        margin-top: 300px; /* Ajuste de margem para dispositivos menores */
+    }
+
+    .manual-btn, .navigation-auto div {
+        margin: 0 2px; /* Redução do espaçamento entre os botões */
+    }
+}
+
 /*Carrossel*/
 
 section {
@@ -376,7 +407,6 @@ section {
 }
 
 /*Barra abaixo*/
-
 .nav-down {
     background-color: var(--color7-);
     max-width: 1200px;
@@ -590,7 +620,7 @@ section {
 .cart p {
     color: rgb(179, 179, 179);
     font-size: 15px;
-    max-width: 400px;
+    max-width: 380px;
     line-height: 25px;
     margin-bottom: 12px;
     text-align: justify;

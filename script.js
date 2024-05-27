@@ -30,7 +30,7 @@ let count = 1; // Inicialize a contagem antes de iniciar o intervalo
 
 function nextImage() {
     count++;
-    if (count > 4) { // Ajuste o limite de contagem se você tiver 5 slides
+    if (count > 3) { // Ajuste o limite de contagem se você tiver 5 slides
         count = 1;
     }
 
