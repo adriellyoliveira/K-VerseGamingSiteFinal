@@ -166,6 +166,11 @@ nav {
     color: white;
     z-index: 10001;
     cursor: pointer;
+    transition: all .42s ease;
+}
+#menu-icon:hover{
+    transform: scale(1.1);
+    color: var(--color5-);
 }
 
 li {
@@ -256,6 +261,52 @@ li {
 
     .manual-btn, .navigation-auto div {
         margin: 0 2px; /* Redução do espaçamento entre os botões */
+    }
+}
+
+/* Estilo da Barra Lateral */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--color2-);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--color3-);
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: var(--color5-);
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    #menu-icon {
+        display: block;
     }
 }
 /*Cabeçalho fim*/
@@ -372,9 +423,11 @@ li {
 
 @media screen and (max-width: 768px) {
     .slider {
-        width: 300%;
-        height: auto;
+        width: 100%; /* Altera a largura para ocupar 100% do contêiner pai */
+        max-width: 1200px; /* Define uma largura máxima para o carrossel */
+        height: auto; /* Permite que a altura seja ajustada automaticamente */
     }
+    
 
     .slides {
         width: 100%;
@@ -388,6 +441,7 @@ li {
 
     .slide img {
         width: 100%;
+        height: auto;
     }
 
     .manual-navigation, .navigation-auto {
@@ -399,6 +453,8 @@ li {
         margin: 0 2px; /* Redução do espaçamento entre os botões */
     }
 }
+
+
 
 /*Carrossel*/
 
@@ -424,6 +480,9 @@ section {
     display: flex;
     align-items: center;
     gap: 3rem;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
 }
 
 .link2 a {
@@ -447,6 +506,31 @@ section {
 
 .link2 a:hover::after {
     width: 80%;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .nav-down {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .nav-bottom {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap; /* Manter lado a lado, permitindo quebra de linha */
+    }
+
+    .link2 {
+        flex: 1 1 100px; /* Ajusta o tamanho dos itens */
+    }
+
+    .link2 a {
+        display: block;
+        text-align: center;
+    }
 }
 /*Barra abaixo fim*/
 

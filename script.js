@@ -75,6 +75,22 @@ loginBtn.addEventListener('click', () => {
 
 
 
+// Abre a barra lateral
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+}
+
+// Fecha a barra lateral
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+}
+
+// Fecha a barra lateral quando o usuário clica fora dela
+window.addEventListener('click', function(event) {
+    if (!event.target.closest('.sidenav') && !event.target.matches('.bx-menu')) {
+        closeNav();
+    }
+});
 
 
 
