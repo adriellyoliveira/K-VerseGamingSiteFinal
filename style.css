@@ -19,7 +19,7 @@
     --color4-: #E0E0E0;
     --color5-: #6A0DAD;
     --color6-: #5e0a99;
-    --color7-: #414040;
+    --color7-: #333333;
     --color8-:
     --color9-:
     --color10-:
@@ -98,7 +98,7 @@ a {
 
 header {
     background-color: var(--color2-);
-    box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.329);
+    box-shadow: 0px 0px 16px 0px rgba(5, 5, 5, 0.329);
 }
 
 nav {
@@ -262,6 +262,51 @@ li {
     .manual-btn, .navigation-auto div {
         margin: 0 2px; /* Redução do espaçamento entre os botões */
     }
+}
+
+/*Barra abaixo*/
+.nav-down {
+    background-color: var(--color2-);
+    max-width: 2000px;
+    margin: auto;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-bottom {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.link2 a {
+    font-family: "Poetsen One", Arial, Helvetica, sans-serif;
+    position: relative;
+    padding-bottom: 0.75rem;
+    margin-bottom: 10px;
+    color: var(--color3-);
+}
+
+.link2 a::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color5-);
+    transition: all 0.4s ease;
+}
+
+.link2 a:hover::after {
+    width: 80%;
 }
 
 /* Estilo da Barra Lateral */
@@ -460,52 +505,6 @@ li {
 
 section {
     padding: 3% 10% 3% 10%;
-}
-
-/*Barra abaixo*/
-.nav-down {
-    background-color: var(--color7-);
-    max-width: 1200px;
-    margin: auto;
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.329);;
-}
-
-.nav-bottom {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    gap: 3rem;
-    padding: 0;
-    margin: 0;
-    flex-wrap: wrap;
-}
-
-.link2 a {
-    font-family: "Poetsen One", Arial, Helvetica, sans-serif;
-    position: relative;
-    padding-bottom: 0.75rem;
-    margin-bottom: 10px;
-    color: var(--color3-);
-}
-
-.link2 a::after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 0;
-    bottom: 0;
-    left: 0;
-    background-color: var(--color5-);
-    transition: all 0.4s ease;
-}
-
-.link2 a:hover::after {
-    width: 80%;
 }
 
 /* Responsividade */
