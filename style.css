@@ -68,6 +68,10 @@ body {
     color: black;
 }
 
+.modal-content h4 {
+    color: black;
+}
+
 .close-button {
     color: #aaa;
     float: right;
